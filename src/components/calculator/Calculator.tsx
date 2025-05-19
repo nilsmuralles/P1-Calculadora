@@ -4,7 +4,7 @@ import useCalculator from '../../hooks/useCalculator'
 import './Calculator.css'
 
 const Calculator = () => {
-  const { display, inputNumber } = useCalculator()
+  const { display, inputNumber, inputOperation, calculate, clear } = useCalculator()
 
   return (
     <>
@@ -13,14 +13,14 @@ const Calculator = () => {
           <Display value={ display }/>
         </section>
         <section className='buttons-container'>
-          <Button label='C' onClick={()=>{}}/>
+          <Button label='C' onClick={ clear }/>
           <Button label='+/-' onClick={()=>{}}/>
           <Button label='%' onClick={()=>{}}/>
           <Button label='/' onClick={()=>{}}/>
           <Button label='7' onClick={()=>{ inputNumber('7') }}/>
           <Button label='8' onClick={()=>{ inputNumber('8') }}/>
           <Button label='9' onClick={()=>{ inputNumber('9') }}/>
-          <Button label='X' onClick={()=>{}}/>
+          <Button label='x' onClick={()=>{}}/>
           <Button label='4' onClick={()=>{ inputNumber('4') }}/>
           <Button label='5' onClick={()=>{ inputNumber('5') }}/>
           <Button label='6' onClick={()=>{ inputNumber('6') }}/>
@@ -28,11 +28,11 @@ const Calculator = () => {
           <Button label='1' onClick={()=>{ inputNumber('1') }}/>
           <Button label='2' onClick={()=>{ inputNumber('2') }}/>
           <Button label='3' onClick={()=>{ inputNumber('3') }}/>
-          <Button label='+' onClick={()=>{}}/>
+          <Button label='+' onClick={()=>{ inputOperation('+') }}/>
           <Button label='0' onClick={()=>{ inputNumber('0') }}/>
           <Button label=' ' onClick={()=>{}}/>
           <Button label='.' onClick={()=>{}}/>
-          <Button label='=' onClick={()=>{}}/>
+          <Button label='=' onClick={ calculate }/>
         </section>
       </main>
     </>

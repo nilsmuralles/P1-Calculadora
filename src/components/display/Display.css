@@ -2,8 +2,9 @@
   width: 310px;
   height: 90px;
   background-color: lightgray;
-  font-size: 70px;
+  font-size: 55px;
   text-align: right;
-  overflow-y: hidden;
-  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
