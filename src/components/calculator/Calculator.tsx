@@ -1,4 +1,5 @@
 import Button from '../button/Button'
+import Display from '../display/Display'
 import './Calculator.css'
 
 const Calculator = () => {
@@ -6,7 +7,7 @@ const Calculator = () => {
     <>
       <main>
         <section className='display-container'>
-
+          <Display />
         </section>
         <section className='buttons-container'>
           <Button label='C' onClick={()=>{}}/>

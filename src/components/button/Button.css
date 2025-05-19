@@ -3,4 +3,5 @@ button {
   border: 0;
   background-color: lime;
   cursor: pointer;
+  font-size: 20px;
 }
