@@ -1,5 +1,9 @@
 .display {
   width: 310px;
   height: 90px;
-  background-color: violet;
+  background-color: lightgray;
+  font-size: 70px;
+  text-align: right;
+  overflow-y: hidden;
+  overflow-x: auto;
 }

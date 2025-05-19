@@ -1,9 +1,14 @@
 import './Display.css'
 
-const Display = () => {
+interface DisplayProps {
+  value: string
+}
+
+const Display = ({value}: DisplayProps) => {
   return (
    <>
      <div className='display'>
+        {value}
      </div>
    </>
  )

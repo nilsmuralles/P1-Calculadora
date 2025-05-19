@@ -1,7 +1,8 @@
 button {
   margin: 0;
   border: 0;
-  background-color: lime;
+  color: white;
+  background-color: #343434;
   cursor: pointer;
   font-size: 20px;
 }
