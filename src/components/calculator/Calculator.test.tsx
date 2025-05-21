@@ -30,3 +30,22 @@ test('Realizar opearciones combinadas por medio de la calculadora', () => {
 
   expect(getByText('16', { selector: '.display' })).toBeTruthy()
 })
+
+test('Obtener ERROR si se obtiene un número mayor a 999,999,999', () => {
+  const { getByText } = render(<Calculator />)
+
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('8', { selector: 'button' }))
+  fireEvent.click(getByText('x', { selector: 'button' }))
+  fireEvent.click(getByText('2', { selector: 'button' }))
+  fireEvent.click(getByText('=', { selector: 'button' }))
+
+  expect(getByText('ERROR', { selector: '.display' })).toBeTruthy()
+})
