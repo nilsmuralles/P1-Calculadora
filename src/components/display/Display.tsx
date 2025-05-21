@@ -1,4 +1,4 @@
-import './Display.css'
+import './Display.module.css'
 
 interface DisplayProps {
   value: string

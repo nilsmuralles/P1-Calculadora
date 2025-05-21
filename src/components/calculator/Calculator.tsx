@@ -1,7 +1,7 @@
 import Button from '../button/Button'
 import Display from '../display/Display'
 import useCalculator from '../../hooks/useCalculator'
-import './Calculator.css'
+import './Calculator.module.css'
 
 const Calculator = () => {
   const { display, inputNumber, inputOperation, calculate, clear } = useCalculator()
