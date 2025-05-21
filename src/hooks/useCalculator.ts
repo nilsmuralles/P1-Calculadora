@@ -30,6 +30,8 @@ const useCalculator = () => {
 
     switch (operation) {
       case '+': result = previous + current; break
+      case '-': result = previous - current; break
+      case 'x': result = previous * current; break
       default: result = current
     }
 
