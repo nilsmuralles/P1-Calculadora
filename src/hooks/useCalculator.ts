@@ -7,6 +7,9 @@ const useCalculator = () => {
   const [overrideNext, setOverride] = useState(false)
 
   const inputNumber = (number: string) => {
+    if (number === '.' && display.includes('.')) {
+      return
+    }
     if (overrideNext) {
       setDisplay(number)
       setOverride(false)

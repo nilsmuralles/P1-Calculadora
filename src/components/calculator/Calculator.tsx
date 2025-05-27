@@ -31,7 +31,7 @@ const Calculator = () => {
           <Button label='+' onClick={()=>{ inputOperation('+') }}/>
           <Button label='0' onClick={()=>{ inputNumber('0') }}/>
           <Button label=' ' onClick={()=>{}}/>
-          <Button label='.' onClick={()=>{}}/>
+          <Button label='.' onClick={()=>{ inputNumber('.') }}/>
           <Button label='=' onClick={ calculate }/>
         </section>
       </main>
