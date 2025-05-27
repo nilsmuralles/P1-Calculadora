@@ -32,16 +32,22 @@ const useCalculator = () => {
       case '+': result = previous + current; break
       case '-': result = previous - current; break
       case 'x': result = previous * current; break
+      case '/': result = previous / current; break
       default: result = current
     }
 
-    if (result < 0 || result > 999999999) {
+    if (!Number.isInteger(result)) {
+      result = parseFloat(result.toPrecision(9))
+    }
+    
+    if (result > 999999999) {
       setDisplay('ERROR')
       setOverride(true)
     } else {
       setDisplay(String(result))
       setPrevious(result)
     }
+
     setOperation(null)
   }
 

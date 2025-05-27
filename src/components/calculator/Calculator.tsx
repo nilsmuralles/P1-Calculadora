@@ -16,7 +16,7 @@ const Calculator = () => {
           <Button label='C' onClick={ clear }/>
           <Button label='+/-' onClick={()=>{}}/>
           <Button label='%' onClick={()=>{}}/>
-          <Button label='/' onClick={()=>{}}/>
+          <Button label='÷' onClick={()=>{ inputOperation('/') }}/>
           <Button label='7' onClick={()=>{ inputNumber('7') }}/>
           <Button label='8' onClick={()=>{ inputNumber('8') }}/>
           <Button label='9' onClick={()=>{ inputNumber('9') }}/>
