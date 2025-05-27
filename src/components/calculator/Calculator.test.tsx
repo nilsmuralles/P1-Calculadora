@@ -49,3 +49,20 @@ test('Obtener ERROR si se obtiene un número mayor a 999,999,999', () => {
 
   expect(getByText('ERROR', { selector: '.display' })).toBeTruthy()
 })
+
+test('División con punto decimal', () => {
+  const { getByText } = render(<Calculator />)
+
+  fireEvent.click(getByText('7', { selector: 'button' }))
+  fireEvent.click(getByText('.', { selector: 'button' }))
+  fireEvent.click(getByText('2', { selector: 'button' }))
+  fireEvent.click(getByText('1', { selector: 'button' }))
+  fireEvent.click(getByText('÷', { selector: 'button' }))
+  fireEvent.click(getByText('4', { selector: 'button' }))
+  fireEvent.click(getByText('.', { selector: 'button' }))
+  fireEvent.click(getByText('0', { selector: 'button' }))
+  fireEvent.click(getByText('7', { selector: 'button' }))
+  fireEvent.click(getByText('=', { selector: 'button' }))
+
+  expect(getByText('1.77149877', { selector: '.display' })).toBeTruthy()
+})
