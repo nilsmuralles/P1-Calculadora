@@ -1,8 +1,12 @@
 .display {
   width: 310px;
   height: 90px;
-  background-color: lightgray;
-  font-size: 55px;
+  background: #E5EEFB;
+  background: linear-gradient(180deg, rgba(229, 238, 251, 1) 0%, rgba(242, 247, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 50px;
+  padding: 0px 10px;
   text-align: right;
   display: flex;
   align-items: center;

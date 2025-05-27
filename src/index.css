@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: lightcyan;
+  font-family: Sometype Mono;
 }
 
 * {
@@ -15,4 +16,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('https://archive.org/download/ms-windows-7-wallpapers/img0.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -1,7 +1,11 @@
 main {
   width: 350px;
   height: 550px;
-  background-color: black;
+  background: #83A8C5;
+  background: linear-gradient(189deg, rgba(131, 168, 197, 1) 45%, rgba(74, 141, 183, 1) 55%);
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 .display-container {
@@ -10,17 +14,40 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background: #EDF4FC;
+  background: linear-gradient(180deg, rgba(237, 244, 252, 1) 0%, rgba(237, 244, 252, 1) 100%);
 }
 
 .buttons-container {
   width: 100%;
   height: 75%;
-  background-color: black;
+  background: #EDF4FC;
+  background: linear-gradient(180deg, rgba(237, 244, 252, 1) 0%, rgba(217, 228, 241, 1) 50%, rgba(217, 228, 241, 1) 100%);
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+}
+
+button:nth-child(17) {
+  grid-column: span 2 / span 2;
+  grid-row-start: 5;
+}
+
+button {
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  background: #F1F5F9;
+  background: linear-gradient(180deg, rgba(241, 245, 249, 1) 45%, rgba(232, 239, 247, 1) 55%);
+}
+
+button:nth-child(-n+4),
+button:nth-child(4n+4),
+button:nth-child(18),
+button:nth-child(19) {
+  background: #E4EBF4;
+  background: linear-gradient(180deg, rgba(228, 235, 244, 1) 45%, rgba(213, 224, 237, 1) 55%);
 }

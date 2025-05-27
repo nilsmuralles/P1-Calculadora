@@ -24,13 +24,9 @@ const useCalculator = () => {
     if (operation === '+/-') {
       setDisplay(String(Number(display) * (-1)))
     }
-    if (operation === '-' && operation !== null && !display.includes('-')) {
-      inputNumber('-')
-    } else {
-      setOperation(operation)
-      setPrevious(Number(display))
-      setOverride(true)
-    }
+    setOperation(operation)
+    setPrevious(Number(display))
+    setOverride(true)
   }
 
   const calculate = () => {
@@ -48,7 +44,7 @@ const useCalculator = () => {
     }
 
     if (!Number.isInteger(result)) {
-      result = parseFloat(result.toPrecision(9))
+      result = parseFloat(result.toPrecision(8))
     }
     
     if (result > 999999999) {
