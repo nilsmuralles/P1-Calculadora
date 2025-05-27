@@ -1,6 +1,6 @@
-import { expect, test } from 'vitest';
-import { render, fireEvent } from '@testing-library/react';
-import Calculator from './Calculator';
+import { expect, test } from 'vitest'
+import { render, fireEvent } from '@testing-library/react'
+import Calculator from './Calculator'
 
 test('Sumar por medio de la calculadora funciona', () => {
   const { getByText } = render(<Calculator />)
