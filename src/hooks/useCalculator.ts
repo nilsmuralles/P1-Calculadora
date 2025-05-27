@@ -21,9 +21,16 @@ const useCalculator = () => {
   }
 
   const inputOperation = (operation: string) => {
-    setOperation(operation)
-    setPrevious(Number(display))
-    setOverride(true)
+    if (operation === '+/-') {
+      setDisplay(String(Number(display) * (-1)))
+    }
+    if (operation === '-' && operation !== null && !display.includes('-')) {
+      inputNumber('-')
+    } else {
+      setOperation(operation)
+      setPrevious(Number(display))
+      setOverride(true)
+    }
   }
 
   const calculate = () => {

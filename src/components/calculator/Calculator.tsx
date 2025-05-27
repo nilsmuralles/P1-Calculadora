@@ -14,7 +14,7 @@ const Calculator = () => {
         </section>
         <section className='buttons-container'>
           <Button label='C' onClick={ clear }/>
-          <Button label='+/-' onClick={()=>{}}/>
+          <Button label='+/-' onClick={()=>{ inputOperation('+/-') }}/>
           <Button label='%' onClick={()=>{}}/>
           <Button label='÷' onClick={()=>{ inputOperation('/') }}/>
           <Button label='7' onClick={()=>{ inputNumber('7') }}/>
